@@ -13,7 +13,7 @@ provider "aws" {
 
 # 1. VPC
 resource "aws_vpc" "create_vpc"   {       #hey i create vpc ,tf:ok and give tag name:,tf-ok           
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "11.0.0.0/16"
   tags = {
     Name = "tf_vpc" #naming it 
   }
@@ -22,7 +22,7 @@ resource "aws_vpc" "create_vpc"   {       #hey i create vpc ,tf:ok and give tag 
 # 2. Private Subnet
 resource "aws_subnet" "create_pri_sub" {
   vpc_id            = aws_vpc.create_vpc.id
-  cidr_block        = "10.0.1.0/24"
+  cidr_block        = "11.0.1.0/24"
   availability_zone = "eu-central-1a"
   tags = {
     Name = "tf_pri_sub"  #naming it 
@@ -32,7 +32,7 @@ resource "aws_subnet" "create_pri_sub" {
 # 3. Public Subnet
 resource "aws_subnet" "create_pub_sub" {
   vpc_id            = aws_vpc.create_vpc.id
-  cidr_block        = "10.0.2.0/24"
+  cidr_block        = "11.0.2.0/24"
   availability_zone = "eu-central-1b"
   tags = {
     Name = "tf_pub_sub"
