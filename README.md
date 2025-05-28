@@ -1,1 +1,1 @@
-# launches ec2 in public subnet generated private and pub keys
+# Ec2 launch with pri and pub key generation
