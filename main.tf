@@ -140,7 +140,7 @@ egress {
   
 
   tags = {
-    Name = "Dr_pal_instance"  # Name of the instance
+    Name = "Damo_raktham"  # Name of the instance
   }
 }
 output "instance_public_ip" {
